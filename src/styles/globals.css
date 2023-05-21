@@ -1,7 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+/* @import "tailwindcss/base"; */
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "antd/dist/reset.css";
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -24,4 +24,71 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+body {
+  color: white;
+  height: 100vh;
+  font-family: sans-serif;
+  background-color: rgb(15 23 42);
+}
+.ant-upload-wrapper .ant-upload-drag,
+.ant-btn-dashed,
+.ant-card .ant-card-head,
+.app_border,
+.ant-card .ant-card-actions,
+.ant-card .ant-card-actions > li:not(:last-child),
+.ant-btn-primary:disabled {
+  border-color: rgb(51 65 85/1) !important;
+}
+
+.ant-upload.ant-upload-drag {
+  height: 250px;
+  width: 100%;
+  padding: 20px;
+  width: 60%;
+  background-color: rgb(51 65 85/1) !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.ant-card {
+  background: #1e293b;
+  border: 0px;
+}
+.ant-card .ant-card-head,
+.ant-card .ant-card-body,
+.ant-input-number-input {
+  color: rgb(209 213 219/1) !important;
+}
+.ant-card .ant-card-actions {
+  background-color: transparent;
+}
+#canva-side {
+  height: 500px;
+  border-radius: 10px;
+}
+#canvas-container {
+  border-radius: 10px;
+  position: relative;
+  margin-bottom: 10px;
+}
+#screenshot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.action-buttons {
+  text-align: left;
+  padding: 0px 15px;
+}
+.app-container {
+  height: calc(100vh - 60px);
+}
+@media screen and (min-width: 991px) {
+  .app-container > div {
+    height: 100%;
+    align-items: center;
+  }
 }
